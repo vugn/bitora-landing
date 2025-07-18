@@ -1,4 +1,19 @@
+"use client"
+
+import Link from "next/link"
+
 export function Footer() {
+  // Fungsi untuk scroll ke section tertentu
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   return (
     <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-white/10">
       <div className="max-w-6xl mx-auto">
@@ -24,24 +39,36 @@ export function Footer() {
             <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-600 dark:text-slate-400">
               <li>
-                <a href="#" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                >
                   About
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                <button
+                  onClick={() => scrollToSection('roadmap')}
+                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                >
                   Roadmap
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                <button
+                  onClick={() => scrollToSection('tokenomics')}
+                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                >
                   Tokenomics
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                <button
+                  onClick={() => scrollToSection('social-links')}
+                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                >
                   Community
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -51,24 +78,38 @@ export function Footer() {
             <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-gray-600 dark:text-slate-400">
               <li>
-                <a href="#" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                <a
+                  href="/whitepaper.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
                   Whitepaper
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                <Link
+                  href="/docs"
+                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
                   Documentation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                <Link
+                  href="/faq"
+                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
                   FAQ
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                <Link
+                  href="/support"
+                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                >
                   Support
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
