@@ -6,27 +6,47 @@ export function Roadmap() {
       phase: "Phase 1",
       title: "Foundation",
       status: "completed",
-      items: ["Core team assembly", "Whitepaper development", "Initial concept validation", "Community building"],
+      items: [
+        "Landing page launched",
+        "Core idea validated",
+        "Community channels opened",
+        "Project brief published"
+      ],
     },
     {
       phase: "Phase 2",
       title: "Development",
       status: "in-progress",
-      items: ["Smart contract development", "Security audits", "Beta testing platform", "Partnership negotiations"],
+      items: [
+        "Blockchain setup started",
+        "Token utility model defined",
+        "Wallet & POS in progress",
+        "Initial ecosystem components built"
+      ],
     },
     {
       phase: "Phase 3",
       title: "Launch",
       status: "upcoming",
-      items: ["Mainnet deployment", "Token generation event", "Exchange listings", "Mobile app release"],
+      items: [
+        "Mainnet release",
+        "BTO token launch",
+        "Mobile & web wallet rollout",
+        "Merchant onboarding begins"
+      ],
     },
     {
       phase: "Phase 4",
-      title: "Expansion",
+      title: "Growth",
       status: "upcoming",
-      items: ["Global partnerships", "Advanced features", "Cross-chain integration", "Enterprise solutions"],
+      items: [
+        "Cross-chain token migration",
+        "Loyalty token (BABZ) program",
+        "DEX & fiat gateway expansion",
+        "Global adoption campaigns"
+      ],
     },
-  ]
+  ];
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -57,7 +77,7 @@ export function Roadmap() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
             Roadmap
           </h2>
-          <p className="text-xl text-gray-600 dark:text-slate-300">Our journey to revolutionize blockchain payments</p>
+          <p className="text-xl text-gray-600 dark:text-slate-300">Our journey to reshape real-world payments with blockchain technology.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">

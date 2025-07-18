@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="relative z-10">
           <Hero />
           <About />
-          <Statistics />
+          {/* <Statistics /> */}
           <Newsletter />
           <ContactForm />
           <Roadmap />

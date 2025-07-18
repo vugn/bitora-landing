@@ -5,22 +5,22 @@ export function About() {
     {
       icon: Shield,
       title: "Secure Blockchain",
-      description: "Built on cutting-edge blockchain technology for maximum security and transparency.",
+      description: "Built with the Cosmos SDK, ensuring secure, scalable, and transparent on-chain operations.",
     },
     {
       icon: Zap,
       title: "Lightning Fast",
-      description: "Instant transactions with minimal fees for seamless real-world payments.",
+      description: "Near-instant confirmations with fixed, low fees — optimized for real-world retail use.",
     },
     {
       icon: Globe,
       title: "Global Reach",
-      description: "Connecting blockchain innovation with real-world payment solutions worldwide.",
+      description: "Designed for scalable deployment across markets, starting with real-world retail partners.",
     },
     {
       icon: Users,
       title: "Community Driven",
-      description: "Built by the community, for the community. Join the revolution.",
+      description: "Powered by open governance and real-world use cases — built with our community at the core.",
     },
   ]
 
@@ -32,8 +32,7 @@ export function About() {
             The Future of Payments
           </h2>
           <p className="text-xl text-gray-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Bitora Ecosystem bridges the gap between blockchain innovation and real-world payment solutions, creating a
-            seamless experience for users and businesses alike.
+            Bridging blockchain with real-world payments — Bitora empowers businesses and users with fast, predictable, and secure transactions.
           </p>
         </div>
 
