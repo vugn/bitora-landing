@@ -51,13 +51,13 @@ export function Roadmap() {
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="roadmap" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-            Development Roadmap
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+            Roadmap
           </h2>
-          <p className="text-xl text-slate-300 dark:text-slate-400">Our journey to revolutionize blockchain payments</p>
+          <p className="text-xl text-gray-600 dark:text-slate-300">Our journey to revolutionize blockchain payments</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
@@ -69,20 +69,20 @@ export function Roadmap() {
               )}
 
               <div
-                className={`relative z-10 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:scale-105 ${getStatusColor(item.status)}`}
+                className={`relative z-10 bg-white/80 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 dark:border-white/10 transition-all duration-300 hover:scale-105 shadow-lg ${getStatusColor(item.status)}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   {getStatusIcon(item.status)}
                   <div>
-                    <div className="text-sm text-slate-400 font-medium">{item.phase}</div>
-                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                    <div className="text-sm text-gray-500 dark:text-slate-400 font-medium">{item.phase}</div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">{item.title}</h3>
                   </div>
                 </div>
 
                 <ul className="space-y-2">
                   {item.items.map((subItem, subIndex) => (
-                    <li key={subIndex} className="flex items-start gap-2 text-slate-300">
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+                    <li key={subIndex} className="flex items-start gap-2 text-gray-600 dark:text-slate-300">
+                      <div className="w-1.5 h-1.5 bg-blue-500 dark:bg-blue-400 rounded-full mt-2 flex-shrink-0" />
                       <span className="text-sm">{subItem}</span>
                     </li>
                   ))}

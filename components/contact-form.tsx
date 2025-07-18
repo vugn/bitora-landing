@@ -49,19 +49,19 @@ export function ContactForm() {
           <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <MessageSquare className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
             Get in Touch
           </h2>
-          <p className="text-xl text-slate-300 dark:text-slate-400">
+          <p className="text-xl text-gray-600 dark:text-slate-300">
             Have questions about Bitora? We'd love to hear from you.
           </p>
         </div>
 
-        <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+        <div className="bg-white/80 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-white/10 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                   Name *
                 </label>
                 <Input
@@ -70,13 +70,13 @@ export function ContactForm() {
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400"
+                  className="bg-white/80 dark:bg-white/10 border-gray-300 dark:border-white/20 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-slate-400 focus:border-blue-500 dark:focus:border-blue-400"
                   placeholder="Your name"
                   disabled={status === "loading"}
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                   Email *
                 </label>
                 <Input
@@ -85,7 +85,7 @@ export function ContactForm() {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400"
+                  className="bg-white/80 dark:bg-white/10 border-gray-300 dark:border-white/20 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-slate-400 focus:border-blue-500 dark:focus:border-blue-400"
                   placeholder="your@email.com"
                   disabled={status === "loading"}
                 />
@@ -93,7 +93,7 @@ export function ContactForm() {
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                 Subject
               </label>
               <Input
@@ -102,14 +102,14 @@ export function ContactForm() {
                 type="text"
                 value={formData.subject}
                 onChange={handleChange}
-                className="bg-white/10 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400"
+                className="bg-white/80 dark:bg-white/10 border-gray-300 dark:border-white/20 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-slate-400 focus:border-blue-500 dark:focus:border-blue-400"
                 placeholder="What's this about?"
                 disabled={status === "loading"}
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                 Message *
               </label>
               <Textarea
@@ -118,7 +118,7 @@ export function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
-                className="bg-white/10 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 resize-none"
+                className="bg-white/80 dark:bg-white/10 border-gray-300 dark:border-white/20 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-slate-400 focus:border-blue-500 dark:focus:border-blue-400 resize-none"
                 placeholder="Tell us more about your inquiry..."
                 disabled={status === "loading"}
               />
