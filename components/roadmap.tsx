@@ -75,9 +75,9 @@ export function Roadmap() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-            Roadmap
+            BTO Protocol Roadmap
           </h2>
-          <p className="text-xl text-gray-600 dark:text-slate-300">Our journey to reshape real-world payments with blockchain technology.</p>
+          <p className="text-xl text-gray-600 dark:text-slate-300">Our journey to deliver native consensus-layer blockchain innovation.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">

@@ -29,10 +29,13 @@ export function About() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-            The Future of Payments
+            Introducing BTO Protocol
           </h2>
-          <p className="text-xl text-gray-600 dark:text-slate-300 max-w-3xl mx-auto">
-            Bridging blockchain with real-world payments — Bitora empowers businesses and users with fast, predictable, and secure transactions.
+          <p className="text-xl text-gray-600 dark:text-slate-300 max-w-4xl mx-auto mb-4">
+            A revolutionary rules-based ecosystem for transforming legacy assets into functional utility across chains.
+          </p>
+          <p className="text-lg text-gray-500 dark:text-slate-400 max-w-3xl mx-auto">
+            Operating at the consensus layer where execution finality is resolved natively, and systemic integrity is enforced by protocol, not middleware.
           </p>
         </div>
 

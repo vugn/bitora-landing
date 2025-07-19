@@ -38,10 +38,10 @@ export function Newsletter() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-            Stay Updated
+            Rewriting Blockchain. Stay in the Loop.
           </h2>
           <p className="text-xl text-gray-600 dark:text-slate-300 mb-8">
-            Be the first to know when Bitora launches. Get exclusive updates, early access, and special announcements.
+            Be the first to experience the next blockchain standard. Get exclusive updates, early access, and groundbreaking announcements.
           </p>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">

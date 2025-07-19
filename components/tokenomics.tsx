@@ -23,10 +23,10 @@ export function Tokenomics() {
             <PieChart className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-            Tokenomics
+            BTO Tokenomics
           </h2>
           <p className="text-xl text-gray-600 dark:text-slate-300">
-            Transparent and sustainable token distribution model
+            Powering cross-chain utility with transparent token distribution
           </p>
         </div>
 
