@@ -46,8 +46,12 @@ export function ContactForm() {
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <MessageSquare className="w-8 h-8 text-white" />
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <img
+              src="/images/logo/vectorlogo.svg"
+              alt="Bitora Logo"
+              className="w-10 h-10 object-contain filter brightness-0 invert"
+            />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
             Get in Touch

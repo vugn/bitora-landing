@@ -70,8 +70,12 @@ export function Hero() {
         {/* Logo/Brand */}
         <div className="mb-8 flex justify-center">
           <div className="relative">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/25">
-              <Sparkles className="w-10 h-10 text-white" />
+            <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/25">
+              <img
+                src="/images/logo/vectorlogo.svg"
+                alt="Bitora Logo"
+                className="w-16 h-16 object-contain filter brightness-0 invert"
+              />
             </div>
             <div className="absolute -inset-1 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl blur opacity-30 animate-pulse" />
           </div>

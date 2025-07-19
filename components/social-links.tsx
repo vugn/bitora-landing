@@ -1,34 +1,20 @@
-import { MessageCircle, Twitter, Github, Send } from "lucide-react"
+import { MessageCircle, Send } from "lucide-react"
 
 export function SocialLinks() {
   const socialLinks = [
     {
-      name: "Discord",
-      icon: MessageCircle,
-      href: "#",
-      color: "hover:text-indigo-400 hover:border-indigo-400",
+      name: "Telegram",
+      icon: Send,
+      href: "https://t.me/BTOoffical",
+      color: "hover:text-cyan-400 hover:border-cyan-400",
       description: "Join our community",
     },
     {
-      name: "Twitter",
-      icon: Twitter,
-      href: "#",
-      color: "hover:text-blue-400 hover:border-blue-400",
-      description: "Follow for updates",
-    },
-    {
-      name: "GitHub",
-      icon: Github,
-      href: "#",
-      color: "hover:text-gray-400 hover:border-gray-400",
-      description: "View our code",
-    },
-    {
-      name: "Telegram",
-      icon: Send,
-      href: "#",
-      color: "hover:text-cyan-400 hover:border-cyan-400",
-      description: "Join discussions",
+      name: "Discord",
+      icon: MessageCircle,
+      href: "https://discord.gg/Y889ChRb",
+      color: "hover:text-indigo-400 hover:border-indigo-400",
+      description: "Connect with us",
     },
   ]
 

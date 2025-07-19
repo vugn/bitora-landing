@@ -22,7 +22,11 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">B</span>
+                <img
+                  src="/images/logo/vectorlogo.svg"
+                  alt="Bitora Logo"
+                  className="w-6 h-6 object-contain filter brightness-0 invert"
+                />
               </div>
               <span className="text-2xl font-bold text-gray-900 dark:text-white">Bitora</span>
             </div>
