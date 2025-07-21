@@ -1,7 +1,13 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { PieChart, FileText, TrendingUp, Zap, ArrowRightLeft, Shield } from "lucide-react"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 
 export function Tokenomics() {
+  const sectionRef = useRef(null)
+  const inView = useInView(sectionRef, { once: true, amount: 0.1 })
+  
   const tokenUtilities = [
     {
       icon: TrendingUp,
@@ -26,7 +32,14 @@ export function Tokenomics() {
   ]
 
   return (
-    <section id="tokenomics" className="py-20 px-4 sm:px-6 lg:px-8">
+    <motion.section 
+      ref={sectionRef}
+      id="tokenomics" 
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="w-16 h-16 bg-gradient-to-br from-blue-800 to-blue-950 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -101,48 +114,56 @@ export function Tokenomics() {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-blue-300 mb-8 text-center">Token Allocation</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-blue-950/50 shadow-md">
-              <div className="text-center mb-2">
-                <span className="text-blue-700 dark:text-blue-400 font-bold text-xl">50%</span>
-                <h4 className="font-medium text-gray-900 dark:text-blue-300">Public Sale</h4>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-blue-200">50,000,000 BTO allocated for public token sale in tiered rounds to raise $35 million.</p>
-            </div>
-            <div className="bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-blue-950/50 shadow-md">
-              <div className="text-center mb-2">
-                <span className="text-blue-700 dark:text-blue-400 font-bold text-xl">15%</span>
-                <h4 className="font-medium text-gray-900 dark:text-blue-300">Team & Founders</h4>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-blue-200">15,000,000 BTO reserved for team and founders, locked and vested over 12 to 24 months.</p>
-            </div>
-            <div className="bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-blue-950/50 shadow-md">
-              <div className="text-center mb-2">
-                <span className="text-blue-700 dark:text-blue-400 font-bold text-xl">15%</span>
-                <h4 className="font-medium text-gray-900 dark:text-blue-300">Ecosystem & Rewards</h4>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-blue-200">15,000,000 BTO for ecosystem development, staking, liquidity mining, and loyalty programs.</p>
-            </div>
-            <div className="bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-blue-950/50 shadow-md">
-              <div className="text-center mb-2">
-                <span className="text-blue-700 dark:text-blue-400 font-bold text-xl">10%</span>
-                <h4 className="font-medium text-gray-900 dark:text-blue-300">Treasury</h4>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-blue-200">10,000,000 BTO held in company treasury for operational costs, legal expenses, and marketing.</p>
-            </div>
-            <div className="bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-blue-950/50 shadow-md">
-              <div className="text-center mb-2">
-                <span className="text-blue-700 dark:text-blue-400 font-bold text-xl">5%</span>
-                <h4 className="font-medium text-gray-900 dark:text-blue-300">Partnerships & Advisors</h4>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-blue-200">5,000,000 BTO designated for partnerships and advisors, locked and vested according to agreements.</p>
-            </div>
-            <div className="bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-blue-950/50 shadow-md">
-              <div className="text-center mb-2">
-                <span className="text-blue-700 dark:text-blue-400 font-bold text-xl">5%</span>
-                <h4 className="font-medium text-gray-900 dark:text-blue-300">Community Initiatives</h4>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-blue-200">5,000,000 BTO reserved for community initiatives such as airdrops, giveaways, and strategic future use.</p>
-            </div>
+            {[
+              { percentage: "50%", title: "Public Sale", description: "50,000,000 BTO allocated for public token sale in tiered rounds to raise $35 million.", gradient: "from-blue-500 to-purple-600" },
+              { percentage: "15%", title: "Team & Founders", description: "15,000,000 BTO reserved for team and founders, locked and vested over 12 to 24 months.", gradient: "from-purple-500 to-pink-600" },
+              { percentage: "15%", title: "Ecosystem & Rewards", description: "15,000,000 BTO for ecosystem development, staking, liquidity mining, and loyalty programs.", gradient: "from-green-500 to-blue-600" },
+              { percentage: "10%", title: "Treasury", description: "10,000,000 BTO held in company treasury for operational costs, legal expenses, and marketing.", gradient: "from-yellow-500 to-orange-600" },
+              { percentage: "5%", title: "Partnerships & Advisors", description: "5,000,000 BTO designated for partnerships and advisors, locked and vested according to agreements.", gradient: "from-cyan-500 to-blue-600" },
+              { percentage: "5%", title: "Community Initiatives", description: "5,000,000 BTO reserved for community initiatives such as airdrops, giveaways, and strategic future use.", gradient: "from-indigo-500 to-purple-600" }
+            ].map((item, index) => (
+              <motion.div 
+                key={index}
+                className="group relative bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-gray-200 dark:border-blue-950/50 shadow-md h-48 flex flex-col transition-all duration-500 hover:border-blue-500/50"
+                initial={{ opacity: 0, y: 50, rotateY: -15 }}
+                animate={inView ? { opacity: 1, y: 0, rotateY: 0 } : { opacity: 0, y: 50, rotateY: -15 }}
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  rotateY: 5,
+                  boxShadow: "0 25px 50px rgba(59, 130, 246, 0.25)",
+                  borderColor: "rgba(59, 130, 246, 0.8)"
+                }}
+                style={{ perspective: 1000 }}
+              >
+                {/* Animated Background */}
+                <motion.div
+                  className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-500`}
+                  animate={{
+                    background: [
+                      `linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent)`,
+                      `linear-gradient(225deg, transparent, rgba(59, 130, 246, 0.1), transparent)`,
+                      `linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent)`
+                    ]
+                  }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                />
+                
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="text-center mb-4 flex-shrink-0">
+                    <motion.span 
+                      className={`text-2xl font-bold bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent`}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      {item.percentage}
+                    </motion.span>
+                    <h4 className="font-medium text-gray-900 dark:text-blue-300 mt-2">{item.title}</h4>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-blue-200 flex-1 leading-relaxed">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
@@ -207,6 +228,6 @@ export function Tokenomics() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

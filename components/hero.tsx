@@ -321,32 +321,28 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <motion.span
-            className="block bg-gradient-to-r from-white via-blue-100 to-blue-300 dark:from-white dark:via-blue-100 dark:to-blue-300 bg-clip-text text-transparent"
+            className="block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
             animate={{
               backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
             }}
             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
             style={{ backgroundSize: '200% 200%' }}
           >
-            The Next Blockchain
+            The Next Blockchain Standard
           </motion.span>
           <br />
-
+          <motion.span
+            className="block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+            animate={{
+              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+            }}
+            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            style={{ backgroundSize: '200% 200%' }}
+          >
+            Is Loading…
+          </motion.span>
         </motion.h1>
-        <motion.div
-          ref={containerRef}
-          style={{ position: 'relative' }}
-        >
-          <VariableProximity
-            label={'Hover me! And then star React Bits on GitHub, or else...'}
-            className={'variable-proximity-demo'}
-            fromFontVariationSettings="'wght' 400, 'opsz' 9"
-            toFontVariationSettings="'wght' 1000, 'opsz' 40"
-            containerRef={containerRef}
-            radius={100}
-            falloff='linear'
-          />
-        </motion.div>
+  
         {/* Enhanced Subtitle with Typewriter Effect */}
         <motion.div
           className="mb-8 hero-element"

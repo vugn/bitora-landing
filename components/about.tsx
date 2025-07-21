@@ -219,16 +219,19 @@ export function About() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className="group relative bg-black/60 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/20 shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 overflow-hidden"
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              animate={inView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.9 }}
-              transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+              className="group relative bg-black/60 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/20 shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 overflow-hidden h-80 flex flex-col"
+              initial={{ opacity: 0, y: 50, scale: 0.9, rotateY: -15 }}
+              animate={inView ? { opacity: 1, y: 0, scale: 1, rotateY: 0 } : { opacity: 0, y: 50, scale: 0.9, rotateY: -15 }}
+              transition={{ duration: 0.8, delay: 0.8 + index * 0.15, type: "spring", stiffness: 100 }}
               whileHover={{ 
                 scale: 1.05, 
                 y: -10,
-                boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.3)'
+                rotateY: 5,
+                boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.3)',
+                borderColor: 'rgba(59, 130, 246, 0.8)'
               }}
               whileTap={{ scale: 0.95 }}
+              style={{ perspective: 1000 }}
             >
               {/* Animated Background Gradient */}
               <motion.div
@@ -245,7 +248,7 @@ export function About() {
               
               {/* Icon Container */}
               <motion.div 
-                className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mb-6 relative group-hover:scale-110 transition-transform duration-300`}
+                className={`w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mb-6 relative group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
                 animate={{ 
                   boxShadow: [
                     '0 10px 25px -5px rgba(59, 130, 246, 0.3)',
@@ -272,7 +275,7 @@ export function About() {
               </motion.div>
               
               {/* Content */}
-              <div className="relative z-10">
+              <div className="relative z-10 flex-1 flex flex-col">
                 <motion.h3 
                   className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300"
                   animate={{
@@ -286,7 +289,7 @@ export function About() {
                 >
                   {feature.title}
                 </motion.h3>
-                <p className="text-blue-200 leading-relaxed group-hover:text-blue-100 transition-colors duration-300">
+                <p className="text-blue-200 leading-relaxed group-hover:text-blue-100 transition-colors duration-300 flex-1">
                   {feature.description}
                 </p>
               </div>

@@ -277,13 +277,16 @@ export function Roadmap() {
               )}
 
               <motion.div
-                className={`relative z-10 bg-black/70 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/30 shadow-2xl overflow-hidden group-hover:border-blue-400/50 transition-all duration-500`}
+                className={`relative z-10 bg-black/70 backdrop-blur-xl rounded-3xl p-8 border border-blue-500/30 shadow-2xl overflow-hidden group-hover:border-blue-400/50 transition-all duration-500 h-96 flex flex-col`}
                 whileHover={{ 
-                  scale: 1.02, 
-                  y: -5,
-                  boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.4)'
+                  scale: 1.05, 
+                  y: -10,
+                  rotateY: 5,
+                  boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.4)',
+                  borderColor: 'rgba(59, 130, 246, 0.8)'
                 }}
                 whileTap={{ scale: 0.98 }}
+                style={{ perspective: 1000 }}
               >
                 {/* Animated Background Gradient */}
                 <motion.div
@@ -298,7 +301,7 @@ export function Roadmap() {
                   transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                 />
                 {/* Enhanced Header */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 flex-shrink-0">
                   <div className="flex items-center gap-4 flex-grow">
                     {/* Animated Icon Container */}
                     <motion.div 
@@ -386,7 +389,7 @@ export function Roadmap() {
                 </div>
 
                 {/* Enhanced Items List */}
-                <div className="relative z-10">
+                <div className="relative z-10 flex-1 flex flex-col justify-center">
                   <ul className="space-y-4">
                     {item.items.map((subItem, subIndex) => (
                       <motion.li 
