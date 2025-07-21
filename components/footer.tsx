@@ -9,7 +9,7 @@ export function Footer() {
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        block: 'start'    
       })
     }
   }
