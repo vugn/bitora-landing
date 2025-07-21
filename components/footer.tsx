@@ -9,7 +9,7 @@ export function Footer() {
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'    
+        block: 'start'
       })
     }
   }
@@ -21,31 +21,31 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-800 to-blue-950 rounded-xl flex items-center justify-center">
                 <img
                   src="/images/logo/vectorlogo.svg"
                   alt="Bitora Logo"
                   className="w-6 h-6 object-contain filter brightness-0 invert"
                 />
               </div>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">Bitora</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-300 dark:from-white dark:via-blue-100 dark:to-blue-300 bg-clip-text text-transparent">Bitora</span>
             </div>
-            <p className="text-gray-600 dark:text-slate-400 mb-4 max-w-md">
+            <p className="text-gray-600 dark:text-blue-300 mb-4 max-w-md">
               Revolutionizing the future of blockchain payments with cutting-edge technology and real-world solutions.
             </p>
-            <div className="text-sm text-gray-500 dark:text-slate-500">
+            <div className="text-sm text-gray-500 dark:text-blue-500/80">
               © {new Date().getFullYear()} Bitora Ecosystem. All rights reserved.
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-gray-900 dark:text-blue-300 font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-600 dark:text-slate-400">
               <li>
                 <button
                   onClick={() => scrollToSection('about')}
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                  className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors text-left"
                 >
                   About
                 </button>
@@ -53,7 +53,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection('roadmap')}
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                  className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors text-left"
                 >
                   Roadmap
                 </button>
@@ -61,7 +61,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection('tokenomics')}
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                  className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors text-left"
                 >
                   Tokenomics
                 </button>
@@ -69,7 +69,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection('social-links')}
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-left"
+                  className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors text-left"
                 >
                   Community
                 </button>
@@ -79,14 +79,14 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-gray-900 dark:text-white font-semibold mb-4">Resources</h3>
+            <h3 className="text-gray-900 dark:text-blue-300 font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-gray-600 dark:text-slate-400">
               <li>
                 <a
                   href="/whitepaper.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
                 >
                   Whitepaper
                 </a>
@@ -94,7 +94,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/docs"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
                 >
                   Documentation
                 </Link>
@@ -102,7 +102,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/faq"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
                 >
                   FAQ
                 </Link>
@@ -110,7 +110,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/support"
-                  className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  className="hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
                 >
                   Support
                 </Link>
